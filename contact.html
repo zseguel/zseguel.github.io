@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+    </label>
+    <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="about.html">Quiénes Somos</a>
+        <a href="lugares.html">Lugares</a>
+        <a href="contact.html" class="active">Contacto</a>
+        <a href="extra.html">Extra</a>
+    </div>
+</nav>
+
+<!-- CONTENIDO -->
+<section id="contacto">
+
+    <h1>Formulario de Contacto</h1>
+
+    <h2>Contacto</h2>
+    <p>Completa el formulario para enviarnos tus dudas o recomendaciones.</p>
+
+    <form>
+        <label>Nombre:</label>
+        <input type="text" maxlength="200" required>
+
+        <label>E-mail:</label>
+        <input type="email" maxlength="200" required>
+
+        <label>Asunto:</label>
+        <input type="text" maxlength="200" required>
+
+        <label>Mensaje:</label>
+        <textarea maxlength="1000" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- SECCIÓN EXTRA -->
+    <h2>Información Extra</h2>
+    <p>
+        ¿Conoces algún rincón secreto del Biobío? <br><br>
+        Cuéntanos y lo agregamos a nuestro mapa de lugares escondidos  
+        <strong>(prometemos no hacerlo famoso… todavía).</strong>
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 - Biobío Escondido | Proyecto académico</p>
+</footer>
+</body>
+</html>
