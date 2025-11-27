@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inicio</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+/* -----------------------------
+   ESTILOS GENERALES
+----------------------------- */
+body {
+  font-family: 'Rubik', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #e8f2ff;
+  color: #003153;
+  user-select: none;
+  
+}
+
+header {
+  background-color: #004a80;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  
+  
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+  text-decoration: underline;
+}
+
+h1 {
+  color: #c8ddeb;
+}
+
+h2 {
+  color: #042f4c;
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* -----------------------------
+   CONTENEDOR PRINCIPAL
+----------------------------- */
+.main-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+/* -----------------------------
+   COLUMNA IZQUIERDA
+----------------------------- */
+.left-column {
+  flex: 1 1 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.left-column section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #c7dbf7;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.contenedor {
+  background-color: #f4f8ff;
+  border-left: 4px solid #004a80;
+}
+
+/* -----------------------------
+   GALERÍA HORIZONTAL
+----------------------------- */
+.right-column {
+  flex: 2 1 600px;
+}
+
+.galeria {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px;
+  background: white;
+  border: 1px solid #c7dbf7;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.06);
+  scroll-behavior: smooth;
+}
+
+.foto {
+  min-width: 220px;
+  flex: 0 0 auto;
+  background: #f8fbff;
+  border: 1px solid #c7dbf7;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.foto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.foto img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.foto p {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #004a80;
+  text-align: justify;
+}
+
+/* -----------------------------
+   FOOTER
+----------------------------- */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #004a80;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Scrollbar personalizado */
+.galeria::-webkit-scrollbar {
+  height: 8px;
+}
+
+.galeria::-webkit-scrollbar-thumb {
+  background-color: #004a80;
+  border-radius: 4px;
+}
+ @media(max-width:600px){
+  .proyectos {
+    flex-direction:column;
+  }
+  
+  header {
+    padding: 14px;
+  }
+  
+  .main-container {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+  
+  .left-column {
+    flex: 1 1 auto;
+  }
+  
+  .right-column {
+    flex: 1 1 auto;
+  }
+  
+  .galeria {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+  
+  .foto {
+    min-width: 100%;
+  }
+  
+  h1 {
+    font-size: 1.4rem;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>Bio Bio Escondido</h1>
+<nav>
+  <a class="brand" href="index.html"><img src="logo.svg" alt="Biobío Escondido"></a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+  <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+    <span class="bar bar1"></span>
+    <span class="bar bar2"></span>
+    <span class="bar bar3"></span>
+  </label>
+  <div class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="about.html">Quiénes Somos</a>
+    <a href="lugares.html">Lugares</a>
+    <a href="contact.html">Contacto</a>
+    <a href="extra.html">Extra</a>
+  </div>
+</nav>
+</header>
+
+<div class="main-container">
+
+  <!-- COLUMNA IZQUIERDA -->
+  <div class="left-column">
+
+    <section id="inicio">
+        <h2>Inicio</h2>
+        <p><strong>Bienvenido a Biobío Escondido!!</strong>, un proyecto dedicado a mostrar los tesoros naturales y turísticos menos conocidos de la Región del Biobío, Chile.</p>
+        <p>Explora lugares únicos, poco visitados y de gran belleza.</p>
+        <p>Si llegaste hasta aquí, probablemente te gustan los lugares tranquilos, la naturaleza, o simplemente estás cansado de ver siempre los mismos panoramas en internet.</p>
+    </section>
+
+    <section class="contenedor">
+      <h2>Dato Curioso</h2>
+      <p>¿Sabías que la Región del Biobío tiene más de 500 kilómetros de costa? Muchos de sus lugares aún no aparecen en mapas turísticos.</p>
+    </section>
+
+  </div>
+
+  <!-- COLUMNA DERECHA: GALERÍA -->
+  <div class="right-column">
+    <h2>Galería Destacada</h2>
+    <div class="galeria">
+      <div class="foto">
+        <img src="salto-del-itata-3.jpg" alt="Salto del Itata">
+        <p>Salto del Itata: Una impresionante caída de agua ubicada en las cercanías de Yungay. Ideal para fotografía y contacto con la naturaleza.</p>
+      </div>
+
+      <div class="foto">
+        <img src="playa-ramuntcho-concepcion.jpg" alt="Playa Ramuntcho">
+        <p>Playa Ramuntcho: Una de las playas escondidas más hermosas de la península de Hualpén.</p>
+      </div>
+
+      <div class="foto">
+        <img src="laguna-avendano.jpg" alt="Laguna Avendano">
+        <p>Laguna Avendano: Perfecta para paseos en bote, picnic y avistamiento de aves.</p>
+      </div>
+
+      <div class="foto">
+        <img src="playa-rocoto.jpg" alt="Playa Rocoto">
+        <p>Playa Rocoto: Una playa tranquila en medio de la naturaleza, ideal para relajarse.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2025 - Biobío Escondido | Proyecto académico</p>
+</footer>
+
+</body>
+</html>
+</body>
+</html>
